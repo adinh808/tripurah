@@ -1,0 +1,26 @@
+/opt/IBM/WebSphere855/HTTPServer/htdocs
+http://10.114.77.150:81/d.html
+
+http://10.114.77.150:81/sample.php
+
+
+#!/bin/bash
+OUTPUT="$(date)"
+echo "Content-type: text/html"
+echo ""
+echo "<html><head><title>Demo</title></head><body>"
+echo "Today is $OUTPUT <br>"
+echo "Good Luck!"
+echo "</body></html>"
+
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Demonstration for calling Shell Script from a web page</h1>
+<a href="http://10.114.77.150:81/htdocs/script.sh">Call my Shell Script</a>
+<form action="/opt/IBM/WebSphere855/HTTPServer/htdocs/script.sh" method="post">
+<input type="submit" value="Call my Shell Script">
+</form>
+</body>
+</html>
